@@ -1,7 +1,7 @@
 exports.config = {
   allScriptsTimeout: 11000,
 
-  framework: 'jasmine'
+  framework: 'jasmine',
 
-  specs: ['scenarios/**/*_spec.coffee']
+  specs: ['scenarios/**/*_spec.js']
 }
