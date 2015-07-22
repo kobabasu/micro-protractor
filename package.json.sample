@@ -25,7 +25,7 @@
     "parser": "babel-eslint"
   },
   "scripts": {
-    "preinstall": "npm install -g protractor",
+    "preinstall": "npm install -g protractor babel babel-eslint",
     "postinstall": "node_modules/protractor/bin/webdriver-manager update",
     "start": "NODE_ENV=production NODE_PATH=",
     "test": "protractor"
