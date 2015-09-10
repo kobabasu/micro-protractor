@@ -7,6 +7,7 @@
     "type": "git",
     "url": "//github.com/kobabasu/micro-protractor.git"
   },
+
   "keywords": [
     "protractor",
     "e2e"
@@ -16,20 +17,28 @@
     "linux",
     "!win32"
   ],
+
   "dependencies": {
   },
   "devDependencies": {
     "protractor": "*"
   },
+
   "eslintConfig": {
     "parser": "babel-eslint"
   },
+
   "scripts": {
-    "preinstall": "npm install -g protractor babel babel-eslint",
-    "postinstall": "node_modules/protractor/bin/webdriver-manager update",
-    "start": "NODE_ENV=production NODE_PATH=",
+    "preinstall": "npm install -g protractor",
+    "_mv": "mv -f ./node_modules/protractor ../",
+    "_rm": "rm -fr ./node_modules",
+    "_update": "../node_modules/protractor/bin/webdriver-manager update",
+    "postinstall": "if [ ! -e ../node_modules/protractor ]; then npm run _mv; else npm run _rm; fi; npm run _update",
+    "start": "NODE_ENV=development NODE_PATH=",
+
     "test": "protractor"
   },
+
   "preferGlobal": true,
   "author": "kobabasu",
   "license": "MIT"
