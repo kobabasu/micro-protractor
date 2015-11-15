@@ -29,7 +29,8 @@
   },
 
   "scripts": {
-    "preinstall": "npm install -g protractor",
+    "global": "npm install -g protractor;",
+
     "_mv": "mv -f ./node_modules/protractor ../node_modules/",
     "_rm": "rm -fr ./node_modules",
     "_local": "./node_modules/protractor/bin/webdriver-manager update",
