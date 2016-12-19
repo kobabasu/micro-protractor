@@ -9,8 +9,14 @@ import { dir } from '../dir.es6';
 class E2e extends DefaultRegistry {
 
   init() {
+    // task名の接頭辞を設定
+    let prefix = (dir.name == '') ? '' : dir.name + ':';
+
+    /*
+     * e2e
+     */
     const e2e = {
-      test: dir.root + 'protractor.conf.js';
+      test: dir.root + 'protractor.conf.js'
     };
 
     gulp.task('e2e', shell.task([`
