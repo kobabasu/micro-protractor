@@ -19,7 +19,7 @@ class E2e extends DefaultRegistry {
       test: dir.root + 'protractor.conf.js'
     };
 
-    gulp.task('e2e', shell.task([`
+    gulp.task(prefix + 'e2e', shell.task([`
       protractor ${e2e.test}
     `]));
   }
