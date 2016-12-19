@@ -21,6 +21,12 @@ hub clone kobabasu/micro-protractor e2e
 1. `npm install`
 1. `npm test`
 
+## gulp
+1. gulp/dir.es6.sampleをコピーしgulp/dir.es6を作成
+1. gulp/dir.es6を変更
+1. documentRootでgulp e2eを実行し動作するか確認
+1. documentRootのgulpfile.babel.js内で読み込み
+
 ## check
 1. `npm test` もしくは `gulp e2e`
 1. すべてsuccessならOK
